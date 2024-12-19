@@ -1,0 +1,66 @@
+/* css/animations.css */
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Loader Animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Card Hover Effects */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Button Hover Animation */
+.btn-gold {
+    transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+    transform: scale(1.05);
+}
+
+/* Section Animation Classes */
+.animate {
+    animation: fadeIn 1s ease forwards;
+}
+
+/* Image Loading Animation */
+img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* Mobile Responsive Animations */
+@media (max-width: 768px) {
+    .animate {
+        animation-duration: 0.5s;
+    }
+}
